@@ -10,6 +10,6 @@ app.get('*', (req, res, next) => {
 })
 const PORT =  process.env.PORT_NUMBER | 8081;
 
-app.listen( PORT, () => {
+app.listen( process.env.PORT | PORT, () => {
     console.log(`server started on port = ${PORT}`);
 })
