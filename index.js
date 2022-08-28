@@ -8,8 +8,8 @@ app.use( express.static(path.join(__dirname,'dist')));
 app.get('*', (req, res, next) => {
     res.sendFile( path.join( __dirname, 'dist/index.html'));
 })
-const PORT =  process.env.PORT_NUMBER | 8081;
+const PORT =  process.env.PORT;
 
-app.listen( process.env.PORT | PORT, () => {
+app.listen( PORT, () => {
     console.log(`server started on port = ${PORT}`);
 })
